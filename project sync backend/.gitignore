@@ -1,0 +1,32 @@
+# Virtual Environment
+.bug-tracker/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables
+.env
+.env.local
+.env.*
+!.env.example
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Build files
+dist/
+build/
+*.egg-info/
