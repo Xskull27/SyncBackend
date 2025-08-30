@@ -6,16 +6,16 @@ from logging.config import fileConfig
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel import SQLModel
 from alembic import context
-from app.models.user import User
-from app.models.projects import Project  
-from app.models.issue import Issue
+from project_sync_backend.app.models.user import User
+from project_sync_backend.app.models.projects import Project  
+from project_sync_backend.app.models.issue import Issue
 
 # Add project root to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Import app settings and models
-from app.core.config import settings
-from app.models import *
+from project_sync_backend.app.core.config import settings
+from project_sync_backend.app.models import *
 
 # Alembic Config
 config = context.config

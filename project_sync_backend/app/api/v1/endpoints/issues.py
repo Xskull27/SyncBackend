@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session, select
 from typing import List
 from datetime import datetime
-from app.db.database import get_session
-from app.models.issue import Issue, IssueStatus, IssueCreate, IssueResponse, IssueAssign, IssueStatusUpdate, IssueWithDetails
-from app.models.user import User, UserRole
-from app.models.projects import Project
-from app.api.dependencies import get_current_user, get_current_pm
+from project_sync_backend.app.db.database import get_session
+from project_sync_backend.app.models.issue import Issue, IssueStatus, IssueCreate, IssueResponse, IssueAssign, IssueStatusUpdate, IssueWithDetails
+from project_sync_backend.app.models.user import User, UserRole
+from project_sync_backend.app.models.projects import Project
+from project_sync_backend.app.api.dependencies import get_current_user, get_current_pm
 
 router = APIRouter()
 

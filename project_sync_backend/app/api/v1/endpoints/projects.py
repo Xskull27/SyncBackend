@@ -1,11 +1,13 @@
+# Add missing import for datetime
+from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session, select
 from typing import List
-from app.db.database import get_session
-from app.models.projects import Project, ProjectCreate, ProjectResponse, ProjectWithIssues
-from app.models.issue import Issue
-from app.models.user import User
-from app.api.dependencies import get_current_user, get_current_pm
+from project_sync_backend.app.db.database import get_session
+from project_sync_backend.app.models.projects import Project, ProjectCreate, ProjectResponse, ProjectWithIssues
+from project_sync_backend.app.models.issue import Issue
+from project_sync_backend.app.models.user import User
+from project_sync_backend.app.api.dependencies import get_current_user, get_current_pm
 
 router = APIRouter()
 

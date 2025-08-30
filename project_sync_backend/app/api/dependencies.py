@@ -2,9 +2,9 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlmodel import Session, select
 from jose import JWTError, jwt
-from app.db.database import get_session
-from app.models.user import User, UserRole, TokenData
-from app.core.config import settings
+from project_sync_backend.app.db.database import get_session
+from project_sync_backend.app.models.user import User, UserRole, TokenData
+from project_sync_backend.app.core.config import settings
 
 security = HTTPBearer()
 

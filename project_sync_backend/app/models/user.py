@@ -1,10 +1,13 @@
+# Add missing imports for Project and Issue
+from project_sync_backend.app.models.projects import Project
+from project_sync_backend.app.models.issue import Issue
 from sqlmodel import SQLModel, Field, Relationship
 from typing import Optional, List
 from datetime import datetime
 from uuid import UUID, uuid4
 from enum import Enum
 from pydantic import EmailStr,validator,model_validator
-from app.core.validators import validate_email, validate_password, validate_username,StripWhitespaceMixin
+from project_sync_backend.app.core.validators import validate_email, validate_password, validate_username,StripWhitespaceMixin
 
 class UserRole(str, Enum):
     PM = "PM"

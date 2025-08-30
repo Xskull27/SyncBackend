@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     ALEMBIC_DATABASE_URL:str
 
     class Config:
-        env_file = ".env"
+        env_file = "project_sync_backend/.env"
         extra = "allow"
 
 settings=Settings()

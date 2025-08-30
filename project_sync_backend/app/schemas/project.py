@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from uuid import UUID
 from datetime import datetime
 from typing import Optional
-from app.schemas.base import Base
+from project_sync_backend.app.schemas.base import Base
 
 # Base fields shared across project schemas
 class ProjectBase(Base):

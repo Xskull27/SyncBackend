@@ -3,10 +3,10 @@ from sqlmodel import Session, select
 from passlib.context import CryptContext
 from jose import jwt
 from datetime import datetime, timedelta
-from app.db.database import get_session
-from app.models.user import User, UserRole, UserCreate, UserResponse, UserLogin, Token
-from app.core.config import settings
-from app.api.dependencies import get_current_user,get_current_pm,get_session
+from project_sync_backend.app.db.database import get_session
+from project_sync_backend.app.models.user import User, UserRole, UserCreate, UserResponse, UserLogin, Token
+from project_sync_backend.app.core.config import settings
+from project_sync_backend.app.api.dependencies import get_current_user,get_current_pm,get_session
 
 router = APIRouter()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
