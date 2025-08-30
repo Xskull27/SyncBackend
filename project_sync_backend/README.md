@@ -1,131 +1,75 @@
-# ProjectSync - Manage your Projects and Issues Seamlessly
+⚡ ProjectSync Backend — API for Project & Issue Management
 
-This is the **frontend application** for a bug tracking system, designed to help manage projects and issues efficiently.
+This is the backend service for ProjectSync, a modern bug tracking and project management tool. It provides a high-performance REST API for managing projects, tracking issues, and handling user authentication.
 
----
+📖 Overview
 
-## 📄 Description
+The backend is built with FastAPI and PostgreSQL (NeonDB), ensuring fast responses, secure authentication, and reliable data management. It powers the ProjectSync frontend and can be extended for integrations with other tools.
 
-This project provides a user-friendly interface for tracking bugs, managing projects, and collaborating with team members. Streamline your development workflow and manage your team’s projects and issues more efficiently with our powerful tool.
+✨ Key Features
 
----
+🔐 User Authentication & Authorization with JWT
+📁 Project Management APIs (create, update, delete projects)
+🐞 Issue Tracking APIs with status management (Open, In Progress, Completed)
+👥 User & Assignment Management
+📊 Project Dashboard APIs for summaries
+🗄️ Database Migration Support with Alembic
 
-## 🚀 Features (Conceptual)
 
-* User authentication and authorization
-* Project creation and management
-* Issue tracking with status updates (`Open`, `In Progress`, `Completed`)
-* Assignment of issues to team members
-* Dashboard view for project summaries
-* Responsive design for various devices
 
----
 
-## ⚙️ Installation
+Install dependencies:
 
-To set up the project locally, follow these steps:
+pip install -r requirements.txt
 
-1. **Clone the repository:**
 
-   ```bash
-   git clone <repository_url>
-   cd bug-tracker-frontend
-   ```
 
-2. **Install dependencies:**
+▶️ Running the Server
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+Development
 
-3. **Set up environment variables:**
-   Create a `.env.local` file in the root directory and add any necessary environment variables, such as API endpoints.
+uvicorn app.main:app --reload
 
----
 
-## ▶️ Usage
+Production (Gunicorn + Uvicorn Workers)
 
-### 🔗 Live:
+gunicorn -k uvicorn.workers.UvicornWorker app.main:app
 
-[https://projectsync-alpha.vercel.app/](https://projectsync-alpha.vercel.app/)
 
-### 🖥️ Local Development:
+API will be available at 👉 http://localhost:8000
 
-To run the development server locally:
+Interactive API docs:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Swagger UI → /docs
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ReDoc → /redoc
 
-You can start editing the page by modifying `src/app/page.js`. The page auto-updates as you edit the file.
+🛠️ Tech Stack
 
-### 🔨 Production Build:
+FastAPI — Python web framework
 
-To build the project for production:
+SQLModel — ORM for database interaction
 
-```bash
-npm run build
-# or
-yarn build
-```
+Alembic — migrations
 
-To start the production server:
+PostgreSQL (NeonDB for hosting)
 
-```bash
-npm run start
-# or
-yarn start
-```
+JWT — authentication
 
----
+🚀 Deployment
 
-## 🧱 Technologies Used
+Backend: Render
 
-### 📦 Frontend
+Database: Neon
 
-* **Next.js**: A React framework for building fast web applications.
-* **React**: A JavaScript library for building user interfaces.
-* **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-* **Shadcn/ui**: A collection of re-usable components built with Radix UI and Tailwind CSS.
-* **Axios**: A promise-based HTTP client for making API requests.
-* **react-hook-form**: For flexible and extensible forms with easy-to-use validation.
-* **Zod**: A TypeScript-first schema declaration and validation library.
+🤝 Contributing
 
-### 🧠 Backend
+Contributions are welcome!
 
-* **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python 3.7+ based on standard Python type hints.
-* **Python**: The programming language used for the backend.
-* **Alembic**: A lightweight database migration tool for usage with the SQLAlchemy Database Toolkit.
-* **SQLModel**: A library for interacting with SQL databases, designed to be easy to use and compatible with FastAPI.
-* **JWT (JSON Web Tokens)**: For secure authentication.
+Fork the repo
 
-### 💄 Database
+Create a branch
 
-* **NeonDB**: A serverless PostgreSQL.
-* **PostgreSQL**: A powerful, open-source object-relational database system.
+Submit a PR 🚀
 
----
-
-## 🚀 Deployment
-
-* **Frontend**: [Vercel](https://vercel.com)
-* **Backend**: [Render](https://render.com)
-
----
-
-## 👨‍💻 Developed By
-
-* [**Tarun Singh**](https://github.com/tarunsinghofficial/project-sync) – Frontend
-* **Tushar Aggarwal** – Backend
-
----
-
-## 🤝 Contributing (Conceptual)
-
-Contributions are welcome! Please feel free to open issues or submit pull requests.
+💡 This backend powers the ProjectSync frontend, enabling seamless bug tracking and project management.
