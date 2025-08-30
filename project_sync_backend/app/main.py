@@ -78,7 +78,7 @@ app.add_middleware(
     allow_origins=[
         "https://bug-tracker-frontend-ochre.vercel.app",
         "http://localhost:3000", 
-        "https://projectsync-alpha.vercel.app"
+        "https://project-sync-sigma.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
